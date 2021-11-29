@@ -8,30 +8,43 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    body{
+      background-image: url('images/pattern-background-desktop.svg');
+      background-color: hsl(225, 100%, 94%);
+      background-repeat: no-repeat;
+      background-size: 100% 50%;
+    }
+    .card{
+      background-color: white;
+      /* 가운데 위치, 크기, 둥근 모서리 */
+    }
+    .attribution { font-size: 11px; text-align: center;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+  <div class="card">
+    <img src="images/illustration-hero.svg">
+    <h1>Order Summary</h1>
+    <p>
+      You can now listen to millions of songs,<br>
+      audiobooks, and podcasts on any<br>
+      device anywhere you like!<br>
+    </p>
+    <div class="plan card">
+      <img src="images/icon-music.svg">
+      Annual Plan
+      $59.99/year
+      Change
+    </div>
+    <div class="payment_btn">Proceed to Payment</div>
+    <div class="cancel_btn">Cancel Order</div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/ssoyeong-lee">Soyeong Lee</a>.
   </div>
 </body>
 </html>
