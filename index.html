@@ -8,16 +8,90 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <style>
+    html{
+      height:100%;
+    }
     body{
+      height:100%;
       background-image: url('images/pattern-background-desktop.svg');
       background-color: hsl(225, 100%, 94%);
       background-repeat: no-repeat;
-      background-size: 100% 50%;
+      background-size: contain;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size:16px;
+      font-weight: 500;
     }
     .card{
+      border-radius: 15px;
       background-color: white;
-      /* 가운데 위치, 크기, 둥근 모서리 */
+      width: 400px;
+      height: 600px;
+      margin: auto;
+      /* 수직 가운데 정렬, 높이 설정 그림자*/
+    }
+    .card .header{
+      border-radius: 15px 15px 0px 0px;
+      margin: auto;
+      width: 100%;
+    }
+    .card h1{
+      text-align: center;
+      font-weight: 900;
+    }
+    .card p{
+      text-align: center;
+      color: hsl(224, 23%, 55%);
+    }
+    .card .plan_card{
+      margin: auto;
+      width: 320px;
+      height: 66px;
+      /* 수정할 것 */
+      border-radius: 15px;
+      background-color: hsl(225, 100%, 98%);
+      display:grid;
+      /* 수정할 것 */
+      grid-template-columns: 66px 174px 60px;
+    }
+    .card .plan_card .musicIcon{
+      margin: 9px;
+      /* 크기 설정 */
+    }
+    .card .plan_card .info .plan{
+      /* 폰트 */
+      font-weight: 900;
+    }
+    .card .plan_card .info .price{
+      /* 폰트 */
+      color: hsl(224, 23%, 55%);
+    }
+    .card .plan_card .chg_btn{
+      /* 위치 폰트  hover*/
+      text-decoration: underline;
+      color: hsl(245, 75%, 52%);
+    }
+    .card .payment_btn{
+      margin: auto;
+      width: 320px;
+      border-radius: 15px;
+      text-align: center;
+      font-weight: 700;
+      color:white;
+      background-color: hsl(245, 75%, 52%);
+      /* 위치 크기 폰트 hover 그림자*/
+    }
+    .card .cancel_btn{
+      margin: auto;
+      width: 320px;
+      text-align: center;
+      font-weight: 700;
+      /* 위치 크기 폰트 hover */
+      color: hsl(224, 23%, 55%);
     }
     .attribution { font-size: 11px; text-align: center;}
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -25,18 +99,20 @@
 </head>
 <body>
   <div class="card">
-    <img src="images/illustration-hero.svg">
+    <img src="images/illustration-hero.svg" class="header">
     <h1>Order Summary</h1>
     <p>
       You can now listen to millions of songs,<br>
-      audiobooks, and podcasts on any<br>
-      device anywhere you like!<br>
+      audiobooks, and podcasts on any device<br>
+      anywhere you like!<br>
     </p>
-    <div class="plan card">
-      <img src="images/icon-music.svg">
-      Annual Plan
-      $59.99/year
-      Change
+    <div class="plan_card">
+      <img src="images/icon-music.svg" class="musicIcon">
+      <div class="info">
+        <div class="plan">Annual plan</div>
+        <div class="price">$59.99/year</div>
+      </div>
+      <div class="chg_btn">Change</div>
     </div>
     <div class="payment_btn">Proceed to Payment</div>
     <div class="cancel_btn">Cancel Order</div>
