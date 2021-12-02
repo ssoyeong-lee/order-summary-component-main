@@ -25,13 +25,13 @@ Users should be able to:
 - See hover states for interactive elements
 
 ### Screenshot
-![screen shot]()
+![screen shot](result.png)
 
 
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://ssoyeong-lee.github.io/order-summary-component-main/)
 
 ## My process
 
